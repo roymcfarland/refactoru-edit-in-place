@@ -1,12 +1,14 @@
 $(document).on('ready', function() {
 	
-	$('.text-box').click(function() {
-		console.log('Click handler fired')
-		$('.input').append(
+	$(document).on('click', '.input', function() {
+		console.log('Click handler fired');
+		$(this).after(
 			'<textarea class="new-text-box">'+
 			'Insert Text'+
 			'</textarea>'
 			)
+		$(this).remove();
+		
 	})
   
 });
